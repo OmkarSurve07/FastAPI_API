@@ -25,16 +25,11 @@ app = FastAPI()
 
 while True:
     try:
-        conn = psycopg2.connect(host='e-sign.postgres.database.azure.com',
-                                database='omkarfastapi',
-                                user='squidadmin@e-sign',
-                                password='1qaz@WSX3edc',
-                                cursor_factory=RealDictCursor)
-        # conn = psycopg2.connect(host='localhost',
-        #                         database='tawqeedb',
-        #                         user='postgres',
-        #                         password='admin',
-        #                         cursor_factory=RealDictCursor)
+         conn = psycopg2.connect(host='localhost',
+                                 database='tawqeedb',
+                                 user='postgres',
+                                 password='admin',
+                                 cursor_factory=RealDictCursor)
         
         cursor = conn.cursor()
         print("Database connection was successfull!")
